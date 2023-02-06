@@ -30,157 +30,113 @@
     <div class="row" style="margin-top: 3vh; margin-bottom: 5vh;">
       <div class="col-md-4"></div>
       <div class="col-md-3">
-        <input type="text" id="input" class="form-control" max="20" placeholder="테이블 갯수를 입력해주세요"
+        <input type="text" id="input" class="form-control" placeholder="테이블 갯수를 입력해주세요"
           onkeyPress="javascript:checkInputNum();">
       </div>
       <div class="col-md-2">
-        <button class="btn btn-primary">생성</button>
+        <button class="btn btn-primary" onclick="tableSetting()">생성</button>
       </div>
     </div>
-    <div class="row" style="margin-bottom: 5vh;">
-      <div class="col-md-3"></div>
-      <div class="col-md-3">
-        <div id="top-table-section">
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-        </div>
-        <div style="border: solid 1px; width: 20vh; height: 10vh;">
-        </div>
-        <div id="bottom-table-section">
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div id="top-table-section">
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-        </div>
-        <div style="border: solid 1px; width: 20vh; height: 10vh;">
-        </div>
-        <div id="bottom-table-section">
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3"></div>
+    <div class="row" id="table" style="margin-bottom: 5vh;">
+
     </div>
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3">
-        <div id="top-table-section">
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-        </div>
-        <div style="border: solid 1px; width: 20vh; height: 10vh;">
-        </div>
-        <div id="bottom-table-section">
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div id="top-table-section">
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-          <div class="person" style="width: 30%">
-            <input type="text" class="form-control">
-            <div style="right: -22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-          </div>
-        </div>
-        <div style="border: solid 1px; width: 20vh; height: 10vh;">
-        </div>
-        <div id="bottom-table-section">
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-          <div class="person" style="width: 30%;">
-            <div style="-webkit-transform: rotate(180deg);right: 22px; position: relative;">
-              <i class="bi bi-person-fill" style="font-size: 50px;"></i>
-            </div>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3"></div>
-    </div>
-  </div>
 </body>
 <script>
+  $(document).ready(function () {
+    $(document).on("keyup", ".name", function () {
+      const str = "석범";
+      if (str === $(this).val()) {
+        $(this).parent().find('.icon-div').children().removeClass("bi-person-fill").addClass("bi-person-fill-lock");
+      }
+    });
+  });
+
+  function tableSetting() {
+    $("#table").empty();
+    const tableCount = $("#input").val();
+    for (let i = 0; i < tableCount; i++) {
+      if (i % 2 == 0) {
+        $("#table").append(
+          "<div class=\"col-md-3\"></div>\n" +
+          "      <div class=\"col-md-3\" style=\"margin-bottom: 7vh;\">\n" +
+          "        <div id=\"top-table-section\">\n" +
+          "          <div class=\"person\" style=\"width: 30%\">\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "            <div class=\"icon-div\" style=\"right: -22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "          </div>\n" +
+          "          <div class=\"person\" style=\"width: 30%\">\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "            <div class=\"icon-div\" style=\"right: -22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "          </div>\n" +
+          "        </div>\n" +
+          "        <div style=\"border: solid 1px; width: 20vh; height: 10vh;\">\n" +
+          "        </div>\n" +
+          "        <div id=\"bottom-table-section\">\n" +
+          "          <div class=\"person\" style=\"width: 30%;\">\n" +
+          "            <div class=\"icon-div\" style=\"-webkit-transform: rotate(180deg);right: 22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "          </div>\n" +
+          "          <div class=\"person\" style=\"width: 30%;\">\n" +
+          "            <div class=\"icon-div\" style=\"-webkit-transform: rotate(180deg);right: 22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "          </div>\n" +
+          "        </div>\n" +
+          "      </div>"
+        )
+      } else {
+        $("#table").append(
+          "<div class=\"col-md-3\">\n" +
+          "        <div id=\"top-table-section\">\n" +
+          "          <div class=\"person\" style=\"width: 30%\">\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "            <div class=\"icon-div\" style=\"right: -22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "          </div>\n" +
+          "          <div class=\"person\" style=\"width: 30%\">\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "            <div class=\"icon-div\" style=\"right: -22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "          </div>\n" +
+          "        </div>\n" +
+          "        <div style=\"border: solid 1px; width: 20vh; height: 10vh;\">\n" +
+          "        </div>\n" +
+          "        <div id=\"bottom-table-section\">\n" +
+          "          <div class=\"person\" style=\"width: 30%;\">\n" +
+          "            <div class=\"icon-div\" style=\"-webkit-transform: rotate(180deg);right: 22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "          </div>\n" +
+          "          <div class=\"person\" style=\"width: 30%;\">\n" +
+          "            <div class=\"icon-div\" style=\"-webkit-transform: rotate(180deg);right: 22px; position: relative;\">\n" +
+          "              <i class=\"bi bi-person-fill\" style=\"font-size: 50px;\"></i>\n" +
+          "            </div>\n" +
+          "            <input type=\"text\" class=\"form-control name\">\n" +
+          "          </div>\n" +
+          "        </div>\n" +
+          "      </div>\n" +
+          "      <div class=\"col-md-3\"></div>"
+        )
+      }
+    }
+    return;
+  }
   function checkInputNum() {
     if ((event.keyCode < 48) || (event.keyCode > 57)) {
       event.returnValue = false;
     }
   }
+
 </script>
 
 </html>
