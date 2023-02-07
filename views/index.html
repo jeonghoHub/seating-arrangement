@@ -36,6 +36,13 @@
       <div class="col-md-2">
         <button class="btn btn-primary" onclick="tableSetting()">생성</button>
       </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-1">
+        <button class="btn btn-success" onclick="horizontalLayout()">가로</button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-success" onclick="verticalLayout()">세로</button>
+      </div>
     </div>
     <div class="row" id="table" style="margin-bottom: 5vh;">
 
@@ -43,10 +50,21 @@
 </body>
 <script>
   $(document).ready(function () {
+
+
+    const strArray = ['A', 'B', 'C', 'D', 'E'];
+
+    let randomArray = strArray.sort(() => 0.5 - Math.random())
+
+    console.log(randomArray)
+
+
     $(document).on("keyup", ".name", function () {
       const str = "석범";
       if (str === $(this).val()) {
         $(this).parent().find('.icon-div').children().removeClass("bi-person-fill").addClass("bi-person-fill-lock");
+      } else {
+        $(this).parent().find('.icon-div').children().removeClass("bi-person-fill-lock").addClass("bi-person-fill");
       }
     });
   });
@@ -57,7 +75,7 @@
     for (let i = 0; i < tableCount; i++) {
       if (i % 2 == 0) {
         $("#table").append(
-          "<div class=\"col-md-3\"></div>\n" +
+          "<div class=\"col-md-3 empty-layout\"></div>\n" +
           "      <div class=\"col-md-3\" style=\"margin-bottom: 7vh;\">\n" +
           "        <div id=\"top-table-section\">\n" +
           "          <div class=\"person\" style=\"width: 30%\">\n" +
@@ -73,7 +91,7 @@
           "            </div>\n" +
           "          </div>\n" +
           "        </div>\n" +
-          "        <div style=\"border: solid 1px; width: 20vh; height: 10vh;\">\n" +
+          "        <div style=\"border: solid 1px; width: 67%; height: 17%;\">\n" +
           "        </div>\n" +
           "        <div id=\"bottom-table-section\">\n" +
           "          <div class=\"person\" style=\"width: 30%;\">\n" +
@@ -93,7 +111,7 @@
         )
       } else {
         $("#table").append(
-          "<div class=\"col-md-3\">\n" +
+          "      <div class=\"col-md-3\" style=\"margin-bottom: 7vh;\">\n" +
           "        <div id=\"top-table-section\">\n" +
           "          <div class=\"person\" style=\"width: 30%\">\n" +
           "            <input type=\"text\" class=\"form-control name\">\n" +
@@ -108,7 +126,7 @@
           "            </div>\n" +
           "          </div>\n" +
           "        </div>\n" +
-          "        <div style=\"border: solid 1px; width: 20vh; height: 10vh;\">\n" +
+          "        <div style=\"border: solid 1px; width: 67%; height: 17%;\">\n" +
           "        </div>\n" +
           "        <div id=\"bottom-table-section\">\n" +
           "          <div class=\"person\" style=\"width: 30%;\">\n" +
@@ -125,7 +143,7 @@
           "          </div>\n" +
           "        </div>\n" +
           "      </div>\n" +
-          "      <div class=\"col-md-3\"></div>"
+          "      <div class=\"col-md-3 empty-layout\"></div>"
         )
       }
     }
@@ -135,6 +153,14 @@
     if ((event.keyCode < 48) || (event.keyCode > 57)) {
       event.returnValue = false;
     }
+  }
+  
+  function horizontalLayout() {
+    $(".empty-layout").css('display', 'none');
+  }
+
+  function verticalLayout() {
+    $(".empty-layout").css('display', '');
   }
 
 </script>
