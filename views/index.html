@@ -36,12 +36,14 @@
       <div class="col-md-2">
         <button class="btn btn-primary" onclick="tableSetting()">생성</button>
       </div>
-      <div class="col-md-1"></div>
       <div class="col-md-1">
         <button class="btn btn-success" onclick="horizontalLayout()">가로</button>
       </div>
       <div class="col-md-1">
         <button class="btn btn-success" onclick="verticalLayout()">세로</button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-success" onclick="changeSeat()">섞기</button>
       </div>
     </div>
     <div class="row" id="table" style="margin-bottom: 5vh;">
@@ -50,15 +52,6 @@
 </body>
 <script>
   $(document).ready(function () {
-
-
-    const strArray = ['A', 'B', 'C', 'D', 'E'];
-
-    let randomArray = strArray.sort(() => 0.5 - Math.random())
-
-    console.log(randomArray)
-
-
     $(document).on("keyup", ".name", function () {
       const str = "석범";
       if (str === $(this).val()) {
@@ -154,13 +147,27 @@
       event.returnValue = false;
     }
   }
-  
+
   function horizontalLayout() {
     $(".empty-layout").css('display', 'none');
   }
 
   function verticalLayout() {
     $(".empty-layout").css('display', '');
+  }
+
+  function changeSeat() {
+    let names = []
+    $('.name').each(function (index, item) {
+      let name = $(item).val()
+      if (name !== '') {
+        names.push(name);
+      }
+    });
+    names.sort(() => Math.random() - 0.5);
+    $('.name').each(function (index, item) {
+      $(item).val(names[index])
+    });
   }
 
 </script>
