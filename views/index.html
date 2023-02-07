@@ -30,8 +30,10 @@
     <div class="row" style="margin-top: 3vh; margin-bottom: 5vh;">
       <div class="col-md-4"></div>
       <div class="col-md-3">
-        <input type="text" id="input" class="form-control" placeholder="테이블 갯수를 입력해주세요"
-          onkeyPress="javascript:checkInputNum();">
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroup-sizing-default">테이블 개수</span>
+          <input type="text" id="input" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" onkeyPress="javascript:checkInputNum();">
+        </div>
       </div>
       <div class="col-md-2">
         <button class="btn btn-primary" onclick="tableSetting()">생성</button>
